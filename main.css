@@ -4,6 +4,7 @@
   box-sizing: inherit;
 }
 
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -26,18 +27,26 @@ body {
   padding: 0 1rem;
 }
 
+.container-fluid {padding: 5% 7%;}
+
 /* Header */
 
 .header {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  opacity: 0.7;
+  position: absolute;
+  z-index: 1;
+  padding: 0 7%;
+  background-color: white;
+
 }
 
 .header p {
   margin: 10px;
 }
+
+#number {margin-right: 80px;}
 
 .right {
   display: flex;
@@ -48,8 +57,75 @@ body {
   width: 2rem;
 }
 
-/* Header Ends Here */
+.navbar {z-index: 1;}
 
+.nav-link {margin-right: 20px;
+          font-weight: bolder;}
+
+
+
+#title .container-fluid {text-align: center; padding: 3% 15% 7%;}
+.carousel-item {opacity: 0.5;}
+.intro {background-color: black;}
+
+#title {position: relative;
+        top: -300px;
+        height:1190px;}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+            width: 100%;
+        }
+
+.main-heading {text-align: center;
+              position: relative;
+              top: -700px;}
+.big-heading {font-size: 8rem;
+              font-weight: 200;
+              line-height: 1.5;
+              color: white;
+              position: relative;
+              top: -40px;
+              animation: textanimation 2s ease-in-out;
+              }
+@keyframes textanimation {0%{letter-spacing: 20px;}
+                          100%{letter-spacing: 1px;}
+                          }
+
+.small-heading {font-size: 5rem;
+                line-height: 1.5;
+                color: white;}
+.btn-book { border: 4px solid #D66939;
+            background-color: transparent;
+            color: white;
+            padding: 14px 28px;
+            font-size: 5rem;
+            margin-top: -50px;
+            transition: 0.5s;
+            animation: textanimation2 1s ease-in-out;}
+@keyframes textanimation2 {0%{transform: scale(0);}
+                          100%{letter-spacing: 1px;}
+                                      }
+
+.btn-book:hover {background-color:#D66939;}
+
+
+#headrule1 {width: 8%;
+            border-color: #D66939;
+            border-width: 7px;
+            position: relative;;
+            top: -50px;
+            left: -250px;
+            animation: textanimation2 1s ease-in-out;
+          }
+#headrule2 {width: 8%;
+            border-color: #D66939;
+            border-width: 7px;
+            position: relative;;
+            top: -70px;
+            right: -250px;
+            animation: textanimation2 1s ease-in-out;}
+
+/* Header Ends Here */
 
 /* Facilities section */
 .facilities {
@@ -215,6 +291,7 @@ body {
 }
 
 @media (max-width: 500px) {
+
   .form_wrapper {
     padding: 5rem 2rem;
   }
@@ -222,3 +299,12 @@ body {
     width: 30rem;
   }
 }
+ @media (max-width: 991px){
+   .header-item{display: none;}
+   #headrule2 {position: relative;
+               right: -200px;}
+   .navbar {padding: 10% 0;}
+
+   #title {position: relative;
+           top: -500px;}
+ }
